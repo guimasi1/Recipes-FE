@@ -43,6 +43,7 @@ const logout = () => {
         <div v-if="loggedIn" class="flex gap-3">
           <div
             class="bold-important text-lg hover:bg-lime-200 hover:text-black px-4 py-1 rounded-2xl"
+            :class="{ 'bg-lime-400 text-black': currentRouteName === 'recipes' }"
           >
             <RouterLink to="/recipes">Recipes</RouterLink>
           </div>

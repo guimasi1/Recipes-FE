@@ -24,8 +24,15 @@ onMounted(async () => {
 <template>
   <section class="container mx-auto">
     <h2 class="text-4xl font-bold text-center mt-16 mb-10">Recipes</h2>
-    <div v-if="recipes" class="grid grid-cols-2 md:grid-cols-4 gap-5">
-      <div v-for="recipe in recipes" :key="recipe._id" class="flex flex-col border rounded-md p-0">
+    <div
+      v-if="recipes"
+      class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 px-10 md:px-0 mb-16"
+    >
+      <div
+        v-for="recipe in recipes"
+        :key="recipe._id"
+        class="flex flex-col border rounded-md p-0 cursor-pointer"
+      >
         <div>
           <img class="w-full rounded-t-md" :src="recipe.imageUrl || getImageUrl()" alt="recipe" />
         </div>
