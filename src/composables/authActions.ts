@@ -3,6 +3,7 @@ import { BASE_URL } from './api'
 interface RegisterBody {
   email: string
   password: string
+  username: string
 }
 
 interface LoginBody {
