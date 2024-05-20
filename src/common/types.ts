@@ -5,3 +5,11 @@ export interface User {
   imageUrl?: string
   username: string
 }
+
+export interface Recipe {
+  _id: string
+  author: string
+  title: string
+  description: string
+  imageUrl: string
+}
