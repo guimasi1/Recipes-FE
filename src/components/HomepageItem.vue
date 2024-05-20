@@ -1,4 +1,4 @@
-<script></script>
+<script setup lang="ts"></script>
 <template>
-  <section></section>
+  <section class="container mx-auto">ciao</section>
 </template>
