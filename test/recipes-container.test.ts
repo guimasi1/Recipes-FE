@@ -8,7 +8,7 @@ describe('LoginItem.vue', () => {
     const pinia = createPinia()
     setActivePinia(pinia)
   })
-  it('renders header', () => {
+  it('renders header with -Recipes- as text', () => {
     const wrapper = mount(RecipesContainerItem)
     expect(wrapper.find('h2').text()).toBe('Recipes')
   })
