@@ -10,8 +10,12 @@ describe('LoginItem.vue', () => {
   })
   it('renders login form', () => {
     const wrapper = mount(LoginItem)
+    expect(wrapper.find('form').exists()).toBe(true)
+    expect(wrapper.find('h2').text()).toBe('Login')
     expect(wrapper.find('input[type="email"]').exists()).toBe(true)
+    expect(wrapper.findAll('label').at(0)?.text()).toBe('Email')
+    expect(wrapper.findAll('label').at(1)?.text()).toBe('Password')
     expect(wrapper.find('input[type="password"]').exists()).toBe(true)
-    expect(wrapper.find('button').exists()).toBe(true)
+    expect(wrapper.find('button').text()).toBe('Login')
   })
 })
